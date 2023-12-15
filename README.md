@@ -15,3 +15,11 @@ db.posts.updateMany({ category : {$eq : "Technology"}},
                     {$set : {likes:1, body:"update Post", date:Date()}}) ;
 db.posts.updateMany({ category : {$eq : "Technology"} },
                     {$set : {new_id : 45} } ) ;
+
+db.fruits.insertOne({"name": "포도",
+              "origin": "한국", 
+              "price_per_kg": 8000}) ;
+<!-- {
+  acknowledged: true,
+  insertedId: ObjectId("657bf165a8da734b4f59f458")
+} -->

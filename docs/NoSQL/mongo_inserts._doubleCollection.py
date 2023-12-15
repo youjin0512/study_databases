@@ -17,3 +17,18 @@ mixed_fruit = {"name": "포도",
               "price_per_kg": 8000}
 result = collection.insert_one(mixed_fruit)
 pass
+
+# 분리 입력 (fruits, fruits_colors)
+# insert fruits 작업 진행
+dict_fruit = {"name": "포도",
+              "origin": "한국", 
+              "price_per_kg": 8000}
+result = collection.insert_one(dict_fruit)
+#  insertedId: ObjectId("657bf165a8da734b4f59f458")  # name, origin, price_per_kg insert_one 한 결과값
+
+
+# insert fruits_colors 작업 진행
+[{"fruits_id" : ObjectId("657bf165a8da734b4f59f458"),"color": "보라색"}
+ , {"fruits_id" : ObjectId("657bf165a8da734b4f59f458"),"color": "갈색"}
+ , {"fruits_id" : ObjectId("657bf165a8da734b4f59f458"),"color": "노란색"}]  #mongoDB에 넣어보고 코드화시킨다
+
