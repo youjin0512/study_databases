@@ -16,10 +16,21 @@ db.posts.updateMany({ category : {$eq : "Technology"}},
 db.posts.updateMany({ category : {$eq : "Technology"} },
                     {$set : {new_id : 45} } ) ;
 
-db.fruits.insertOne({"name": "포도",
+db.fruits_colors.insertOne({"name": "포도",
               "origin": "한국", 
               "price_per_kg": 8000}) ;
 <!-- {
   acknowledged: true,
   insertedId: ObjectId("657bf165a8da734b4f59f458")
 } -->
+
+db.fruits_colors.insertMany
+([{"fruits_id" : ObjectId("657bf165a8da734b4f59f458"),"color": "보라색"}
+ , {"fruits_id" : ObjectId("657bf165a8da734b4f59f458"),"color": "갈색"}
+ , {"fruits_id" : ObjectId("657bf165a8da734b4f59f458"),"color": "노란색"}]);
+
+db.fruits_colors.find( {fruits_id : { $eq : ObjectId("657bf165a8da734b4f59f458") } } ) ;
+
+db.fruits.deleteMany({}) ;
+
+db.fruits_colors.deleteMany({}) ;
