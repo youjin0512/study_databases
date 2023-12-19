@@ -40,7 +40,7 @@ def insert_quiz_list(): # 출제한 문제의 리스트를 펑션으로 만든�
 
 #모든 딕셔너리를 quiz_list라는 이름으로 반환한다.
 
-solvingproblem_second = [] #solvingproblem이라는 컬렉션을 리스트로 정의한다.
+solvingproblem_second = [] #solvingproblem_second이라는 컬렉션을 리스트로 정의한다.
 collection = Connect() #위의 MongoDB와의 연결을 호출한 뒤 이것을 collection이라는 변수로 지정한다.
 quiz_list = insert_quiz_list() #딕셔너리의 리스트의 function화 한 기능을 호출하고 quiz_list라는 변수로 선언한다.
 
